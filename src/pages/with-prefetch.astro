@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Books } from "../components/BooksContent"
-
+import { PrefetchBooks } from "../components/PrefetchBooks";
 ---
 
 <Layout title="Welcome to Astro.">
+	<PrefetchBooks slot="head" />
 	<main>
 		<div class="p-4">
-			<a href="/with-prefetch">View this page with pre-fetch</a>
+			<a href="/">View this page without pre-fetch</a>
 		</div>
 		<Books client:load />
 	</main>

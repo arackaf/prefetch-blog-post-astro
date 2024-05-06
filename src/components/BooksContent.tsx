@@ -3,12 +3,13 @@ import { type Book } from "../components/types";
 import { BookCover } from "./BookCover";
 
 import * as d3 from "d3";
+import * as framer from "framer-motion";
 
 export const Books: FC<{}> = (props) => {
   let [books, setBooks] = useState<Book[] | null>(null);
   let [count, setCount] = useState<number | null>(null);
 
-  console.log(typeof d3);
+  console.log(typeof d3, typeof framer);
 
   useEffect(() => {
     fetch("/api/books")

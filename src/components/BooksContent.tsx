@@ -2,9 +2,13 @@ import { useEffect, useState, type FC } from "react";
 import { type Book } from "../components/types";
 import { BookCover } from "./BookCover";
 
+import * as d3 from "d3";
+
 export const Books: FC<{}> = (props) => {
   let [books, setBooks] = useState<Book[] | null>(null);
   let [count, setCount] = useState<number | null>(null);
+
+  console.log(typeof d3);
 
   useEffect(() => {
     fetch("/api/books")

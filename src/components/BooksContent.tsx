@@ -4,12 +4,13 @@ import { BookCover } from "./BookCover";
 
 import * as d3 from "d3";
 import * as framer from "framer-motion";
+import * as recharts from "recharts";
 
 export const Books: FC<{}> = (props) => {
   let [books, setBooks] = useState<Book[] | null>(null);
   let [count, setCount] = useState<number | null>(null);
 
-  console.log(typeof d3, typeof framer);
+  console.log(typeof d3, typeof framer, typeof recharts);
 
   useEffect(() => {
     fetch("/api/books")

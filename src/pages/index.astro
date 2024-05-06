@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Books } from "../components/BooksContent"
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="m-8">Yo</div>
+		<Books client:load />
 	</main>
 </Layout>
 

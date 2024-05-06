@@ -1,5 +1,5 @@
 export async function GET({}) {
-  await new Promise((res) => setTimeout(res, 400));
+  await new Promise((res) => setTimeout(res, 700));
 
   return new Response(JSON.stringify(booksData), {
     status: 200,

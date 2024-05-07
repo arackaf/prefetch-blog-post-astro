@@ -34,7 +34,9 @@ export const Books: FC<{}> = (props) => {
       <div className="flex flex-col gap-3">
         {books.map((book) => (
           <div key={book.id} className="flex gap-4">
-            <BookCover book={book} />
+            <div className="m-w-[55px]">
+              <BookCover book={book} />
+            </div>
             <div className="flex flex-col">
               <span className="leading-none text-base">{book.title}</span>
               <span className="text-sm italic">{(book.authors ?? []).join(", ")}</span>
